@@ -27,3 +27,4 @@ COPY . .
 RUN adduser -D myuser
 USER myuser
 
+RUN gunicorn hello_django.wsgi:application --bind 0.0.0.0:$PORT
